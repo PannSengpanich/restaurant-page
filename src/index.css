@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "JosefinSlab";
+  src: url("./src\Josefin_Slab\JosefinSlab-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 250px;
+  grid-template-rows: auto;
+}
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.name {
+  font-family: "JosefinSlab", sans-serif;
+  font-size: 100px;
+  margin: 50px 20px 0 20px;
+}
