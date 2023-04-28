@@ -4,31 +4,53 @@ import contact from "./contact";
 import "./index.css";
 
 function pageLoad() {
+  const content = document.querySelector("#content");
   const tab = document.createElement("div");
+  const bodyContainer = document.createElement("div");
   const resName = document.createElement("div");
-  resName.classList.add("name");
+
   resName.innerHTML = "Pann";
   const homeBtn = document.createElement("button");
-  homeBtn.innerHTML = "HOME";
+  homeBtn.innerHTML = "Home";
   const menuBtn = document.createElement("button");
-  menuBtn.innerHTML = "MENU";
+  menuBtn.innerHTML = "Food & Drinks";
   const contactBtn = document.createElement("button");
-  contactBtn.innerHTML = "CONTACT";
+  contactBtn.innerHTML = "Contact";
 
+  bodyContainer.classList.add("bodyContainer");
+  resName.classList.add("name");
   tab.classList.add("tab");
   tab.appendChild(resName);
   tab.appendChild(homeBtn);
   tab.appendChild(menuBtn);
   tab.appendChild(contactBtn);
   content.appendChild(tab);
+  content.appendChild(bodyContainer);
 
-  homeBtn.addEventListener("click", home);
-  menuBtn.addEventListener("click", menu);
-  contactBtn.addEventListener("click", contact);
+  function initPage() {
+    const body = home();
+    bodyContainer.appendChild(body);
+  }
 
-  return tab;
+  function changePage(page) {
+    bodyContainer.innerHTML = "";
+    const body = page();
+    bodyContainer.appendChild(body);
+  }
+
+  homeBtn.addEventListener("click", () => {
+    changePage(home);
+  });
+
+  menuBtn.addEventListener("click", () => {
+    changePage(menu);
+  });
+
+  contactBtn.addEventListener("click", () => {
+    changePage(contact);
+  });
+
+  initPage();
 }
 
-const content = document.querySelector("#content");
-const tab = pageLoad();
-document.content.appendChild(tab);
+pageLoad();

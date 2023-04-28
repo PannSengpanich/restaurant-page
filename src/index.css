@@ -1,31 +1,49 @@
 @font-face {
-  font-family: "JosefinSlab";
-  src: url("C:\Users\Windows10\Documents\GitHub\restaurant-page\src\Fonts\Josefin_Slab\JosefinSlab-VariableFont_wght.ttf")
-    format("truetype");
-}
-@font-face {
-  font-family: "Conquest";
-  src: url("C:\Users\Windows10\Documents\GitHub\restaurant-page\src\Fonts\conquest-font\Conquest-8MxyM.ttf")
+  font-family: "Cormorant Garamond";
+  src: url("./Fonts/Cormorant_Garamond/CormorantGaramond-Medium.ttf")
     format("truetype");
 }
 
 html {
   box-sizing: border-box;
 }
-
+body {
+  margin: 0px;
+}
 #content {
   display: grid;
-  grid-template-columns: 250px;
-  grid-template-rows: auto;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 100vh;
 }
 .tab {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
+}
+.bodyContainer {
+  background: black;
+  overflow-y: scroll;
 }
 .name {
-  font-family: "Conquest", sans serif;
+  border-top: 2px brown solid;
+  border-bottom: 2px brown solid;
+  font-weight: 500;
+  color: brown;
+  font-family: "Cormorant Garamond", sans-serif;
   font-size: 100px;
   margin: 50px 20px 0 20px;
+}
+button {
+  color: brown;
+  font-family: "Cormorant Garamond";
+  font-size: 30px;
+  border: none;
+  background: none;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+  transform: translateY(10px);
 }
