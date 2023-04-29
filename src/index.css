@@ -47,3 +47,27 @@ button:hover {
   cursor: pointer;
   transform: translateY(10px);
 }
+.me {
+  color: brown;
+  font-family: "Cormorant Garamond";
+  font-size: 20px;
+  border: none;
+  background: none;
+}
+
+.menuBody,
+.contactBody {
+  animation: fadeIn 1s ease-in-out;
+}
+.homeBody {
+  animation: fadeIn 4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

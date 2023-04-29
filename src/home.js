@@ -2,12 +2,11 @@ import "./home.css";
 
 function home() {
   console.log("home");
-  const outerBody = document.createElement("div");
   const body = document.createElement("div");
   const intro = document.createElement("div");
   const credit = document.createElement("div");
 
-  body.classList.add("body");
+  body.classList.add("homeBody");
   intro.classList.add("intro");
   credit.classList.add("credit");
 

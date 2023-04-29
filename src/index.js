@@ -16,6 +16,9 @@ function pageLoad() {
   menuBtn.innerHTML = "Food & Drinks";
   const contactBtn = document.createElement("button");
   contactBtn.innerHTML = "Contact";
+  const me = document.createElement("div");
+  me.classList.add("me");
+  me.innerHTML = "created by Pann Sengpanich";
 
   bodyContainer.classList.add("bodyContainer");
   resName.classList.add("name");
@@ -24,6 +27,7 @@ function pageLoad() {
   tab.appendChild(homeBtn);
   tab.appendChild(menuBtn);
   tab.appendChild(contactBtn);
+  tab.appendChild(me);
   content.appendChild(tab);
   content.appendChild(bodyContainer);
 
